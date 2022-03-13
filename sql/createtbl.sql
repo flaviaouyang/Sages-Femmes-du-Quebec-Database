@@ -1,5 +1,3 @@
-CONNECT TO cs421;
-
 CREATE TABLE Mother
 (
     RAMQNum    CHAR(12)     NOT NULL,
