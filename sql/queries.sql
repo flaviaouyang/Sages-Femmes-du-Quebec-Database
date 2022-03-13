@@ -1,3 +1,5 @@
+-- list all the appointments for the midwife Marion Girard 
+-- for the week March 21 - March 25 of this year (2022).
 WITH CoupleApt AS (
     SELECT appointmentID, date, time, RAMQNum, practitionerID
     FROM Appointment
@@ -26,7 +28,8 @@ WHERE EXTRACT(YEAR from date) = 2022
 ORDER BY date;
 
 
-
+-- list the results of all the blood iron tests 
+-- that was performed on (Mother) Victoria Gutierrez for her second pregnancy.
 SELECT labworkDate AS Lab_Date,
        result      AS Blood_Iron_Result
 FROM MedicalTest
@@ -41,7 +44,8 @@ WHERE coupleID = (
 ORDER BY labworkDate;
 
 
-
+-- list the names of each birthing center/community clinic as well as the number of pregnancies 
+-- that are due for the month of July, 2022
 WITH RelevantPreg AS (
     SELECT primaryPractitionerID, dueYM, finalDD
     FROM Pregnancy
@@ -64,7 +68,8 @@ GROUP BY Institution.name
 ORDER BY Num_July_Pregnancy DESC;
 
 
-
+-- list the health care card, name and phone number of the mothers who is currently pregnant 
+-- and have not yet given birth and is under the care of a midwife employed by Lac- Saint-Louis
 SELECT DISTINCT Mother.RAMQNum AS Mother_RAMQ,
                 mname          AS Mother_Name,
                 Mother.phone   AS Mother_Phone_Number
@@ -100,7 +105,7 @@ WHERE (
   AND babyID IS NOT NULL;
 
 
-
+-- list the health care card, name of mothers who have had more than one baby in a single pregnancy
 WITH BabyCount AS (
     SELECT Pregnancy.coupleID, Pregnancy.pregnancyNum, COUNT(babyID) AS babyNum
     FROM Pregnancy
