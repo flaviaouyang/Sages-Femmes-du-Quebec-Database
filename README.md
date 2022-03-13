@@ -35,11 +35,8 @@ A database system for midwives program in Quebec. The program will connect midwi
 ## SQL
 
 - [Create schemas](sql/createtbl.sql)
-    - [log](sql/createtbl.log)
 - [Inject testing data](sql/loaddata.sql)
-    - [log](sql/loaddata.log)
 - [Drop schemas](sql/droptbl.sql)
-    - [log](sql/droptbl.log)
 
 ## COMMANDLINE INTERFACE DEMO
 
