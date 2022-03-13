@@ -3,15 +3,19 @@
 A database system for midwives program in Quebec. The program will connect midwives with expecting parents
 
 ## WORKFLOW
-- Design the database using [Entity Relationship Model]()
-- Translate the ER into [Relational Model]()
+
+- Design the database using [Entity Relationship Model](asset/ER.png)
+- Translate the ER into [Relational Model](asset/Relational-Model.md)
 - Implement the Design using IBM-DB2
 - Inject testing data into the database
 - Develop a CLI via Java Database Connectivity (JDBC)
 
 ## ENTITY RELATIONSHIP MODEL
 
+![ER Model](asset/ER.png)
+
 ## RELATIONAL MODEL
+
 - Mother (**<u>RAMQNum</u>**, mname, email, phone, dob, address, profession, bloodtype)
 - Father (**<u>fatherID</u>**, fname, email, phone, dob, address, profession, bloodtype, RAMQNum)
 - Couple (**<u>coupleID</u>**, RAMQNum, fatherID) RAMQNum Reference Mother, fatherID Reference Father
@@ -27,6 +31,15 @@ A database system for midwives program in Quebec. The program will connect midwi
 - MedicalTest (**<u>testID</u>**, type, labworkDate, prescribedDate, takenDate, result, practitionerID, pregnancyNum, coupleID, babyID, techID) practitionerID Reference Midwife, (coupleID, pregnancyNum) Reference Pregnancy, babyID Reference Baby, techID Reference Technician
 - Appointment (**<u>appointmentID</u>**, date, time, pregancyNum, coupleID, practitionerID) practitionerID Reference Midwife, (coupleID, pregnancyNum) Reference Pregnancy
 - Observation (**<u>observationID</u>**, time, date, content, appointmentID) appointmentID Reference Appointment
+
+## SQL
+
+- [Create schemas](sql/createtbl.sql)
+    - [log](sql/createtbl.log)
+- [Inject testing data](sql/loaddata.sql)
+    - [log](sql/loaddata.log)
+- [Drop schemas](sql/droptbl.sql)
+    - [log](sql/droptbl.log)
 
 ## COMMANDLINE INTERFACE DEMO
 
