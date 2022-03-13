@@ -1,12 +1,3 @@
--- Include your INSERT SQL statements in this file.
--- Make sure to terminate each statement with a semicolon (;)
-
--- LEAVE this statement on. It is required to connect to your database.
-CONNECT TO cs421;
-
--- Remember to put the INSERT statements for the tables with foreign key references
---    ONLY AFTER the parent tables!
-
 INSERT INTO Mother (RAMQNum, mname, email, phone, dob, address, profession, bloodtype)
 VALUES ('CONC97582511', 'Cecilia Contreras', 'ceciliacontreras2419@gmail.com', '1-603-267-4782', '08/25/1997',
         '974-8333 Sapien. Ave', 'Doctor', 'AB')
