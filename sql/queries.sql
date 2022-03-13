@@ -118,18 +118,3 @@ FROM BabyCount
          LEFT JOIN Couple ON BabyCount.coupleID = Couple.coupleID
          LEFT JOIN Mother ON COUPLE.RAMQNum = Mother.RAMQNum
 WHERE babyNum > 1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
