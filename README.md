@@ -6,8 +6,9 @@ A database system for midwives program in Quebec. The program will connect midwi
 
 - Design the database using [Entity Relationship Model](asset/ER.png)
 - Translate the ER into [Relational Model](asset/Relational-Model.md)
-- Implement the Design using IBM-DB2
-- Inject testing data into the database
+- [Implement](sql/createtbl.sql) the Design using IBM-DB2
+- [Inject testing data](sql/loaddata.sql) into the database
+- [Perform advanced queries](sql/queries.sql) to test the design of the database
 - Develop a CLI via Java Database Connectivity (JDBC)
 
 ## ENTITY RELATIONSHIP MODEL
@@ -40,4 +41,8 @@ A database system for midwives program in Quebec. The program will connect midwi
 
 ## COMMANDLINE INTERFACE DEMO
 
+
+
 ## LICENSE
+
+All program within this repository are licensed under the [MIT License](LICENSE)
