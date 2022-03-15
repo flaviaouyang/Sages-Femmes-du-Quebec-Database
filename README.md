@@ -6,10 +6,11 @@ A database system for midwives program in Quebec. The program will connect midwi
 
 - Design the database using [Entity Relationship Model](asset/ER.png)
 - Translate the ER into [Relational Model](asset/Relational-Model.md)
+- [Set up DB2 database locally](asset/db2-setup.md) using Docker
 - [Implement](sql/createtbl.sql) the Design using IBM-DB2
 - [Inject testing data](sql/loaddata.sql) into the database
 - [Perform advanced queries](sql/queries.sql) to test the design of the database
-- Develop a CLI via Java Database Connectivity (JDBC)
+- [Develop a CLI](application/SagesFemmes.java) using Java Database Connectivity (JDBC)
 
 ## ENTITY RELATIONSHIP MODEL
 
