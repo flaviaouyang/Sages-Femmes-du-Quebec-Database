@@ -1,3 +1,6 @@
+# Examples of some advanced queries performed
+
+```sql
 -- list all the appointments for the midwife Marion Girard 
 -- for the week March 21 - March 25 of this year (2022).
 WITH CoupleApt AS (
@@ -26,8 +29,15 @@ WHERE EXTRACT(YEAR from date) = 2022
     WHERE name = 'Marion Girard'
 )
 ORDER BY date;
+```
 
+![](img/1.png)
 
+![](img/1.png)
+
+---
+
+```sql
 -- list the results of all the blood iron tests 
 -- that was performed on (Mother) Victoria Gutierrez for her second pregnancy.
 SELECT labworkDate AS Lab_Date,
@@ -42,8 +52,13 @@ WHERE coupleID = (
   AND type = 'blood iron'
   AND pregnancyNum = 2
 ORDER BY labworkDate;
+```
 
+![](img/2.png)
 
+---
+
+```sql
 -- list the names of each birthing center/community clinic as well as the number of pregnancies 
 -- that are due for the month of July, 2022
 WITH RelevantPreg AS (
@@ -66,8 +81,15 @@ FROM Institution
          FULL OUTER JOIN RelevantPreg ON RelevantPreg.primaryPractitionerID = Midwife.practitionerID
 GROUP BY Institution.name
 ORDER BY Num_July_Pregnancy DESC;
+```
 
+![](img/3.png)
 
+![](img/1.png)
+
+---
+
+```sql
 -- list the health care card, name and phone number of the mothers who is currently pregnant 
 -- and have not yet given birth and is under the care of a midwife employed by Lac- Saint-Louis
 SELECT DISTINCT Mother.RAMQNum AS Mother_RAMQ,
@@ -103,8 +125,13 @@ WHERE (
   AND Baby.birthday IS NULL
   AND Baby.birthTime IS NULL
   AND babyID IS NOT NULL;
+```
 
+![](img/4.png)
 
+---
+
+```sql
 -- list the health care card, name of mothers who have had more than one baby in a single pregnancy
 WITH BabyCount AS (
     SELECT Pregnancy.coupleID, Pregnancy.pregnancyNum, COUNT(babyID) AS babyNum
@@ -118,8 +145,13 @@ FROM BabyCount
          LEFT JOIN Couple ON BabyCount.coupleID = Couple.coupleID
          LEFT JOIN Mother ON COUPLE.RAMQNum = Mother.RAMQNum
 WHERE babyNum > 1;
+```
 
+![](img/5.png)
 
+---
+
+```sql
 -- get all appointments
 SELECT Appointment.time                as time,
        Mother.mname                    as name,
@@ -134,3 +166,6 @@ FROM Appointment
                    ON Appointment.coupleID = Pregnancy.coupleID AND Appointment.pregnancyNum = Pregnancy.pregnancyNum
          LEFT JOIN Couple ON Pregnancy.coupleID = Couple.coupleID
          LEFT JOIN Mother ON Couple.RAMQNum = Mother.RAMQNum;
+```
+
+![](img/6.png)
