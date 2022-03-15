@@ -42,7 +42,7 @@ A database system for midwives program in Quebec. The program will connect midwi
 
 ## COMMANDLINE INTERFACE DEMO
 
-
+![Application code demo](asset/demo.gif)
 
 ## LICENSE
 
