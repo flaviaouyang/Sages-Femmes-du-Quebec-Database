@@ -1,3 +1,6 @@
+-- connect to the database
+CONNECT to SF;
+
 CREATE TABLE Mother
 (
     RAMQNum    CHAR(12)     NOT NULL,

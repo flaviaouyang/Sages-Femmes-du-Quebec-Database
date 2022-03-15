@@ -1,4 +1,5 @@
-CONNECT TO cs421;
+-- connect to the database
+CONNECT to SF;
 
 DROP TABLE Mother;
 DROP TABLE Father;

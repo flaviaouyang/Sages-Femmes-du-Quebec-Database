@@ -1,3 +1,6 @@
+-- connect to the database
+CONNECT to SF;
+
 INSERT INTO Mother (RAMQNum, mname, email, phone, dob, address, profession, bloodtype)
 VALUES ('CONC97582511', 'Cecilia Contreras', 'ceciliacontreras2419@gmail.com', '1-603-267-4782', '08/25/1997',
         '974-8333 Sapien. Ave', 'Doctor', 'AB')

@@ -1,3 +1,6 @@
+-- connect to the database
+CONNECT to SF;
+
 -- list all the appointments for the midwife Marion Girard 
 -- for the week March 21 - March 25 of this year (2022).
 WITH CoupleApt AS (
