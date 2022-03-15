@@ -42,6 +42,7 @@ The program connects midwives with expecting parents. This database application 
 
 - [Create schemas](sql/createtbl.sql)
 - [Inject testing data](sql/loaddata.sql)
+- [Queries](sql/query.sql)
 - [Drop schemas](sql/droptbl.sql)
 
 ## COMMANDLINE INTERFACE DEMO
