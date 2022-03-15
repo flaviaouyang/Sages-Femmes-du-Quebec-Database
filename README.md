@@ -4,7 +4,7 @@ A database system for midwives program in Quebec.
 
 ## INTRODUCTION
 
-The program connects midwives with expecting parents. This database application aims to serve midwives' side of data input and processing. A midwife can use this application to review information related to appointments with expecting parents. They can check all notes, and medical tests related to the parents, add new notes for a certain appointment, or prescribe medical tests for the mother.
+This database application aims to serve midwives' side of data input and processing. A midwife can use this application to review information related to appointments with expecting parents. They can check all notes, and medical tests related to the parents, add new notes for a certain appointment, or prescribe medical tests for the mother.
 
 ## WORKFLOW
 
